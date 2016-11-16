@@ -1,0 +1,113 @@
+#gameTitle{
+	height: 50px;
+	width: 300px;
+	text-align: center;
+	margin-left: 10%;
+
+}
+
+#gameDiv{
+	height: 70px;
+	width: 400px;
+	border-width: 2px;
+	border-color: black;
+	border-radius: 20px;
+	background-color: grey;
+	margin-left: 50%;
+	margin: 0 auto;
+
+}
+
+#gameBoard{
+	height: 105px;
+	width: 500px;
+	margin-left: 50%;
+	margin: 0 auto;
+	border-radius: 20px;
+}
+
+.randomBox{
+	background-color: black;
+}
+
+
+#box0{
+	height: 100px;
+	width: 23%;
+	border: solid black;
+	display: inline-block;
+	border-radius: 20px;
+	background-color: blue;
+}
+#box1{
+	height: 100px;
+	width: 24%;
+	border: solid black;
+	display: inline-block;
+	border-radius: 20px;
+	background-color: blue;
+}
+#box2{
+	height: 100px;
+	width: 24%;
+	border: solid black;
+	display: inline-block;
+	background-color: blue;
+	border-radius: 20px;
+}
+#box3{
+	height: 100px;
+	width: 24%;
+	border: solid black;
+	display: inline-block;
+	border-radius: 20px;
+	background-color: blue;
+}
+
+#scorey{
+	height: 200px;
+	width: 80px;
+	background-color: grey;
+	border-radius: 20px;
+	margin-top: -12%;
+	float: right;
+}
+
+#score0{
+	height: 17.5%;
+	width: 93%;
+	border: solid black;
+	border-radius: 20px;
+}
+#score1{
+	height: 17.5%;
+	width: 93%;
+	border: solid black;
+	border-radius: 20px;
+}
+#score2{
+	height: 17.5%;
+	width: 93%;
+	border: solid black;
+	border-radius: 20px;
+}
+#score3{
+	height: 17.5%;
+	width: 93%;
+	border: solid black;
+	border-radius: 20px;
+}
+#score4{
+	height: 15%;
+	width: 93%;
+	border: solid black;
+	border-radius: 20px;
+}
+
+#scoreTitle{
+	margin-right: 20%;
+	margin: 0 auto;
+	float: right;
+	margin-top: -15%;
+
+}
