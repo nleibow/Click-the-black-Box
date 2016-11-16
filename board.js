@@ -1,4 +1,4 @@
-var score = 0;
+var score = [0];
 
 
 
@@ -17,22 +17,24 @@ function gameBoard(){
 	};
 	console.log(row1);
 	document.getElementById("gameBoard").appendChild(row1);
-	var ranBox = document.getElementById(randoBox);
+	var ranBox = document.getElementById("box"+ Math.floor(Math.random() * (4 - 0) +0));
 	ranBox.setAttribute("style","background-color: black;");
 	ranBox.addEventListener("click",function(){
 
 		score ++;
-		console.log(score);
+		console.log(score); 
 		var element = document.getElementById("row1");
 		element.parentNode.removeChild(row1);
 		console.log(row1);
+		document.getElementById("score0").innerHTML= "     "+score;;
+		
 		gameBoard();
 		return score;
 		
 		
 
 	});
-	
+
 
 	
 }

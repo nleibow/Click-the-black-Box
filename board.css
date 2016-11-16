@@ -76,32 +76,37 @@
 #score0{
 	height: 17.5%;
 	width: 93%;
-	border: solid black;
+	
 	border-radius: 20px;
+	border-width: .1px;
 }
 #score1{
 	height: 17.5%;
 	width: 93%;
-	border: solid black;
+	
 	border-radius: 20px;
+	border-width: .1px;
 }
 #score2{
 	height: 17.5%;
 	width: 93%;
-	border: solid black;
+	
 	border-radius: 20px;
+	border-width: .1px;
 }
 #score3{
 	height: 17.5%;
 	width: 93%;
-	border: solid black;
+	
 	border-radius: 20px;
+	border-width: .1px;
 }
 #score4{
 	height: 15%;
 	width: 93%;
-	border: solid black;
+	
 	border-radius: 20px;
+	border-width: .1px;
 }
 
 #scoreTitle{
@@ -110,4 +115,14 @@
 	float: right;
 	margin-top: -15%;
 
+}
+
+#instructions{
+	height: 300px;
+	width: 400px;
+	border: solid black;
+	border-radius: 20px;
+	float: right;
+	margin-top: 5%;
+	margin-right: 10%;
 }
