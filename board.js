@@ -1,4 +1,4 @@
-var score = [0];
+var score = 0;
 
 
 
@@ -20,13 +20,14 @@ function gameBoard(){
 	var ranBox = document.getElementById("box"+ Math.floor(Math.random() * (4 - 0) +0));
 	ranBox.setAttribute("style","background-color: black;");
 	ranBox.addEventListener("click",function(){
-
+		if(score<0){
+			timer();}
 		score ++;
 		console.log(score); 
 		var element = document.getElementById("row1");
 		element.parentNode.removeChild(row1);
 		console.log(row1);
-		document.getElementById("score0").innerHTML= "     "+score;;
+		document.getElementById("score0").innerHTML= "     "+score;
 		
 		gameBoard();
 		return score;
@@ -55,3 +56,18 @@ function scoreBoard(){
 }
 
 scoreBoard();
+
+
+var count = 15;
+var countInterval = setInterval(timer,1000);
+
+function timer(){
+	count -=1;
+	if (count < 0){
+		clearInterval(countInterval);
+		return;
+	} else if(count === 0){
+		alert("out of time! next players turn!")
+	}
+	document.getElementById("timer").innerHTML = count +" seconds remain!";
+}
