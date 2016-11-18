@@ -33,7 +33,7 @@ function gameBoard(){
 			var element = document.getElementById("row1");
 			element.parentNode.removeChild(row1);
 			var score1 =document.getElementById("score0").innerHTML= score;
-			alert("Player 1 your turn is up, Player 2 get ready!")
+			
 			
 		}
 		else if (turns == 1) { 
@@ -101,7 +101,7 @@ function timer(countInterval){
 	} else if(count === 0){
 		turns ++;
 		score = 0;
-		console.log("out of time! next players turn!")
+		alert("Player 1 your turn is up, Player 2 get ready!")
 	
 	}
 	document.getElementById("timer").innerHTML = 'Timer:  '+count +" seconds remain!";
