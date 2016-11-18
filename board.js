@@ -24,7 +24,6 @@ function gameBoard(){
 	var ranBox = document.getElementById("box"+ Math.floor(Math.random() * (4 - 0) +0));
 	ranBox.setAttribute("style","background: radial-gradient(circle at 100px 100px, #000, #000");
 	ranBox.addEventListener("click",function(){
-		timer;
 		score ++;
 		
 		
@@ -64,7 +63,6 @@ function gameBoard(){
 
 		}	
 		gameBoard();
-		timer();
 		return score;
 	});
 
@@ -88,20 +86,21 @@ function scoreBoard(){
 }
 
 scoreBoard();
-var count = 10;
+var count = 15;
 var turns = 0;
 var initialInterval = setInterval(timer,1000);
 
 function timer(countInterval){
 	count -=1;
 	if (count < 0){
-		count = 10;
+		count = 15;
 		clearInterval(countInterval);
 		
 	} else if(count === 0){
 		turns ++;
 		score = 0;
 		alert("Player your turn is up, Next player get ready!")
+		timer();
 	
 	}
 	document.getElementById("timer").innerHTML = 'Timer:  '+count +" seconds remain!";
