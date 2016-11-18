@@ -33,6 +33,7 @@ function gameBoard(){
 			var element = document.getElementById("row1");
 			element.parentNode.removeChild(row1);
 			var score1 =document.getElementById("score0").innerHTML= score;
+			alert("Player 1 your turn is up, Player 2 get ready!")
 			
 		}
 		else if (turns == 1) { 
@@ -59,7 +60,7 @@ function gameBoard(){
 			
 		}	
 		else if (turns == 5){
-			alert("that is the end of te game! Refresh your browser to play again and beat your high score!!")
+			alert("that is the end of the game! Refresh your browser to play again and beat your high score!!")
 
 		}	
 		gameBoard();
@@ -76,7 +77,6 @@ gameBoard();
 function scoreBoard(){
 	var scorey = document.createElement("ol");
 	scorey.setAttribute("id","scorey");
-	console.log(scorey);
 		for (var i = 0; i < 5; i++) {
 			var scoreyy = document.createElement("li");
 			scoreyy.setAttribute("id","score"+ i);
@@ -104,7 +104,7 @@ function timer(countInterval){
 		console.log("out of time! next players turn!")
 	
 	}
-	document.getElementById("timer").innerHTML = count +" seconds remain!";
+	document.getElementById("timer").innerHTML = 'Timer:  '+count +" seconds remain!";
 }
 
 function resetArray (){
