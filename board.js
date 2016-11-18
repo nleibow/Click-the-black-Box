@@ -1,4 +1,8 @@
 var score = 0;
+var scoreArr = [];
+
+
+
 
 
 
@@ -8,6 +12,7 @@ var randoBox = "box"+ rando;
 
 
 function gameBoard(){
+
 	var row1 = document.createElement("div");
 	row1.setAttribute("id","row1");
 		for (var i = 0; i < 4; i++) {
@@ -15,25 +20,51 @@ function gameBoard(){
 			boxs.setAttribute("id","box"+ i);
 			row1.appendChild(boxs);
 	};
-	console.log(row1);
 	document.getElementById("gameBoard").appendChild(row1);
 	var ranBox = document.getElementById("box"+ Math.floor(Math.random() * (4 - 0) +0));
-	ranBox.setAttribute("style","background-color: black;");
+	ranBox.setAttribute("style","background: radial-gradient(circle at 100px 100px, #000, #000");
 	ranBox.addEventListener("click",function(){
-		if(score<0){
-			timer();}
+		timer;
 		score ++;
-		console.log(score); 
-		var element = document.getElementById("row1");
-		element.parentNode.removeChild(row1);
-		console.log(row1);
-		document.getElementById("score0").innerHTML= "     "+score;
-		
-		gameBoard();
-		return score;
 		
 		
+		if (turns==0) {
+			scoreArr.push(score);
+			var element = document.getElementById("row1");
+			element.parentNode.removeChild(row1);
+			var score1 =document.getElementById("score0").innerHTML= score;
+			
+		}
+		else if (turns == 1) { 
+			var element = document.getElementById("row1");
+			element.parentNode.removeChild(row1);
+			var score2 = document.getElementById("score1").innerHTML= score;
+	
+		}
+		else if (turns == 2) {
+			var element = document.getElementById("row1");
+			element.parentNode.removeChild(row1);
+			var score3 = document.getElementById("score2").innerHTML=score;
 
+		}
+		else if (turns == 3) {
+			var element = document.getElementById("row1");
+			element.parentNode.removeChild(row1);
+			var score4 = document.getElementById("score3").innerHTML=" "+ score;
+		}
+		else if (turns == 4) {
+			var element = document.getElementById("row1");
+			element.parentNode.removeChild(row1);
+			var score5 =document.getElementById("score4").innerHTML=score;
+			
+		}	
+		else if (turns == 5){
+			alert("that is the end of te game! Refresh your browser to play again and beat your high score!!")
+
+		}	
+		gameBoard();
+		timer();
+		return score;
 	});
 
 
@@ -49,6 +80,7 @@ function scoreBoard(){
 		for (var i = 0; i < 5; i++) {
 			var scoreyy = document.createElement("li");
 			scoreyy.setAttribute("id","score"+ i);
+			scoreyy.innerHTML=0;
 			scorey.appendChild(scoreyy);
 	};
 	
@@ -56,18 +88,27 @@ function scoreBoard(){
 }
 
 scoreBoard();
+var count = 10;
+var turns = 0;
+var initialInterval = setInterval(timer,1000);
 
-
-var count = 15;
-var countInterval = setInterval(timer,1000);
-
-function timer(){
+function timer(countInterval){
 	count -=1;
 	if (count < 0){
+		count = 10;
 		clearInterval(countInterval);
-		return;
+		
 	} else if(count === 0){
-		alert("out of time! next players turn!")
+		turns ++;
+		score = 0;
+		console.log("out of time! next players turn!")
+	
 	}
 	document.getElementById("timer").innerHTML = count +" seconds remain!";
+}
+
+function resetArray (){
+	scoreArr.length= 0;
+	
+
 }

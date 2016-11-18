@@ -36,16 +36,18 @@
 	width: 23%;
 	border: solid black;
 	display: inline-block;
-	border-radius: 20px;
+	border-radius: 50%;
 	background-color: blue;
+	background: radial-gradient(circle at 100px 100px, #5cabff, #000);
 }
 #box1{
 	height: 100px;
 	width: 24%;
 	border: solid black;
 	display: inline-block;
-	border-radius: 20px;
+	border-radius: 50%;
 	background-color: blue;
+	background: radial-gradient(circle at 100px 100px, #5cabff, #000);
 }
 #box2{
 	height: 100px;
@@ -53,15 +55,17 @@
 	border: solid black;
 	display: inline-block;
 	background-color: blue;
-	border-radius: 20px;
+	border-radius: 50%;
+	background: radial-gradient(circle at 100px 100px, #5cabff, #000);
 }
 #box3{
 	height: 100px;
 	width: 24%;
 	border: solid black;
 	display: inline-block;
-	border-radius: 20px;
+	border-radius: 50%;
 	background-color: blue;
+	background: radial-gradient(circle at 100px 100px, #5cabff, #000);
 }
 
 #scorey{
