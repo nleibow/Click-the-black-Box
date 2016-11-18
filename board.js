@@ -101,7 +101,7 @@ function timer(countInterval){
 	} else if(count === 0){
 		turns ++;
 		score = 0;
-		alert("Player 1 your turn is up, Player 2 get ready!")
+		alert("Player your turn is up, Next player get ready!")
 	
 	}
 	document.getElementById("timer").innerHTML = 'Timer:  '+count +" seconds remain!";
