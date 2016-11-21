@@ -92,14 +92,14 @@ function scoreBoard(){
 }
 
 scoreBoard();
-var count = 5;
+var count = 15;
 var turns = 0;
 var initialInterval = setInterval(timer,1000);
 
 function timer(countInterval){
 	count -=1;
 	if (count < 0){
-		count = 5;
+		count = 15;
 		clearInterval(countInterval);
 		
 	} else if(count === 0){
