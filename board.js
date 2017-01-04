@@ -6,8 +6,8 @@ var scoreArr = [];
 
 
 
-var rando = Math.floor(Math.random() * (4 - 0) +0);
-var randoBox = "box"+ rando;
+var createRand = Math.floor(Math.random() * (4 - 0) +0);
+var randomBox = "box"+ createRand;
 
 
 
@@ -20,9 +20,9 @@ function gameBoard(){
 			row1.appendChild(boxs);
 	};
 	document.getElementById("gameBoard").appendChild(row1);
-	var ranBox = document.getElementById("box"+ Math.floor(Math.random() * (4 - 0) +0));
-	ranBox.setAttribute("style","background: black");
-	ranBox.addEventListener("click",function(){
+	var randomBoxSelect = document.getElementById("box"+ Math.floor(Math.random() * (4 - 0) +0));
+	randomBoxSelect.setAttribute("style","background: black");
+	randomBoxSelect.addEventListener("click",function(){
 		score ++;
 		
 		
