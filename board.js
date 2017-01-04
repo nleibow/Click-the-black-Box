@@ -10,7 +10,7 @@ var createRand = Math.floor(Math.random() * (4 - 0) +0);
 var randomBox = "box"+ createRand;
 
 
-
+// This function creates the scoreboard by using a for loop to get the desired amount of playable boxes and then by setting a different one of those boxes to be the 'played box'
 function gameBoard(){
 	var row1 = document.createElement("div");
 	row1.setAttribute("id","row1");
@@ -77,7 +77,7 @@ function gameBoard(){
 }
 gameBoard();
 
-
+// this function creates a score board that makes five players score availabel. each score is incremented above in the game mechanic function
 function scoreBoard(){
 	var scorey = document.createElement("ol");
 	scorey.setAttribute("id","scorey");
@@ -95,7 +95,7 @@ scoreBoard();
 var count = 15;
 var turns = 0;
 var initialInterval = setInterval(timer,1000);
-
+// This function creates a timer using count intervals and when a specific time is struck then it becomes the next players turn
 function timer(countInterval){
 	count -=1;
 	if (count < 0){
@@ -115,7 +115,7 @@ function timer(countInterval){
 	}
 	document.getElementById("timer").innerHTML = 'Timer:  '+count +" seconds remain!";
 }
-
+// this function determines the winner with a pop up
 function winner(score1, score2, score3, score4, score5){
 	console.log("whatsa good")
 	if (score1>score2 && score1>score3 &&score1>score4 &&score1>score5) {
