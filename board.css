@@ -2,6 +2,8 @@ body{
 	background-image: url('http://cdn.wallpapersafari.com/79/72/X89q3v.jpg')
 
 }
+
+/*Title blocks*/
 #gameTitle{
 	height: 50px;
 	width: 300px;
@@ -25,7 +27,7 @@ body{
 
 
 }
-
+/*creates the boxes look and makes the random box black*/
 #gameBoard{
 	
 	height: 105px;
@@ -80,7 +82,7 @@ body{
 	
 	background: radial-gradient(circle at 100px 100px, #5cabff, #000);
 }
-
+/*Creates the look for the scoreboard*/
 #scorey{
 	height: 200px;
 	width: 80px;
@@ -141,7 +143,7 @@ body{
 	
 
 }
-
+/*Makes the instruction box look nice*/
 #instructions{
 	height: 300px;
 	width: 400px;
@@ -155,7 +157,7 @@ body{
 	opacity: .9;
 	background-color: #5cabff;
 }
-
+/*Makes the timer look descent*/
 #timer{
 	height: 20px;
 	width: 200px;
